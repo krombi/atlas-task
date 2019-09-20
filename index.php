@@ -42,6 +42,3 @@ if (isset($router) && $router instanceof Routing\Router) {
     } catch (Handlers\Exceptions\CustomException $e) {}
     
 }
-
-// var_dump(Core\Helpers\Coder::encode(15788));
-// var_dump(Core\Helpers\Coder::decode(81323));
