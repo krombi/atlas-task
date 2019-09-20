@@ -1,0 +1,192 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Montserrat', Arial, sans-serif;
+	color: #4d4d4d;
+	background: #f7f7f7;
+}
+
+input, textarea, button, select {
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-family: 'Montserrat', Arial, sans-serif;
+	font-size: 16px;
+}
+label {
+	display: block;
+}
+textarea {
+	resize: none;
+}
+span.required {
+	color: #ff0000;
+}
+
+.form-frame {
+    padding: 30px;
+
+}
+#creating-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+}
+#creating-form .cf-field {
+    margin-bottom: 30px;
+}
+#creating-form .cf-field .title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+#creating-form .cf-field .cf-input {
+    position: relative;
+}
+#creating-form .cf-field .cf-input.invisible {
+    display: none;
+}
+#creating-form .cf-field .cf-input input {
+    background: none;
+    border: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+}
+#creating-form .cf-field .cf-input input::-webkit-input-placeholder {
+    color: #bcbcbc;
+}
+#creating-form .cf-field .cf-input input::-moz-placeholder {
+    color: #bcbcbc;
+}
+#creating-form .cf-field .cf-input input:-ms-input-placeholder {
+    color: #bcbcbc;
+}
+#creating-form .cf-field .cf-input input:-moz-placeholder {
+    color: #bcbcbc;
+}
+#creating-form .cf-field .cf-input input:focus {
+    padding: 0 15px;
+}
+#creating-form .cf-field .cf-input .underline {
+    width: 100%;
+    height: 4px;
+    background: #eee;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#creating-form .cf-field .cf-input input:focus ~  .underline {
+    height: 40px;
+    background: #f7f7f7;
+}
+#creating-form .cf-field .cf-list {
+    overflow: hidden;
+    padding-top: 5px;
+}
+#creating-form .cf-field .cf-list label {
+    display: block;
+    position: relative;
+    line-height: 18px;
+    padding: 4px 0 4px 36px;
+    margin: 0 20px 5px 0;
+    cursor: pointer;
+}
+#creating-form .cf-field .cf-list.list-inline label {
+    float: left;
+}
+#creating-form .cf-field .cf-list label > input {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#creating-form .cf-field .cf-list label .makeup {
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    padding: 5px;
+    border: 1px solid #bbb;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#creating-form .cf-field .cf-list label .makeup:before {
+    width: 14px;
+    height: 14px;
+    display: block;
+    content: "";
+    background: #e63a3a;
+    display: none;
+}
+#creating-form .cf-field .cf-list label > input:checked ~  .makeup:before {
+    display: block;
+}
+#creating-form .cf-field .cf-list label.choose-radio .makeup,
+#creating-form .cf-field .cf-list label.choose-radio .makeup:before {
+    border-radius: 50%;
+}
+
+#creating-form .cf-field .cf-select select {
+    height: 40px;
+    width: 100%;
+    background: transparent url(../img/select-bg.svg) no-repeat;
+    background-position: right 10px top 50%;
+    background-size: auto 16px;
+    border: 0;
+    border-bottom: 4px solid #eee;
+    cursor: pointer;
+}
+#creating-form .cf-action button {
+    display: block;
+    width: 100%;
+    line-height: 18px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+#creating-form .cf-action .cf-submit {
+    height: 50px;
+    background: #e63a3a;
+    color: #fff;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+#creating-form .cf-action .cf-reset {
+    height: 18px;
+    color: #999;
+    background: none;
+}
+
+.datepicker {
+    width: 400px;
+}
+
+.anim,
+.anim:before,
+.anim:after {
+	-webkit-transition: .25s;
+	-moz-transition: .25s;
+	-o-transition: .25s;
+	-ms-transition: .25s;
+	transition: .25s;
+}
