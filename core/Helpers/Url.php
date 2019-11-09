@@ -3,11 +3,11 @@ namespace Helpers;
 
 final class Url
 {
-    /**	
+    /**    
      * функция генерации ссылки на основе шаблона 
      */
-	public static function make($hook = null, $data = []): ?string
-	{
+    public static function make($hook = null, $data = []): ?string
+    {
 
         $hooks = ToolsKeeper::get('routing', 'hooks');
 
