@@ -37,20 +37,20 @@ class Router
         if (!is_null($this->handler)) {
 
             $namespace = [
-				'Handlers\Controllers', 
-				$this->handler['c']
+                'Handlers\Controllers', 
+                $this->handler['c']
             ];
             
             $class = implode("\\", $namespace);
             
             // пытаемся инициализировать объект обработчика
-			try {
+            try {
 
-				$handler = new $class();
+                $handler = new $class();
 
-			} catch(Throwable $e) {
+            } catch(Throwable $e) {
 
-				throw new CustomException(202);
+                throw new CustomException(202);
 
             }
             
@@ -60,14 +60,14 @@ class Router
 
                 if (method_exists($handler, $method)) {
 
-					// если метод существует то вызываем его обработку
-					$handler->$method();
+                    // если метод существует то вызываем его обработку
+                    $handler->$method();
 
-				} else {
+                } else {
 
-					throw new CustomException(404);
+                    throw new CustomException(404);
 
-				}
+                }
 
             } else {
 
